@@ -25,7 +25,7 @@ public class Server {
         this.clients = new ArrayList<PrintStream>();
     }
 
-    public void run() throws IOException {
+    public synchronized void run() throws IOException {
         this.server = new ServerSocket(port);
         System.out.println("Port 12345 is now open.");
 
